@@ -1,6 +1,9 @@
 /* Start-Global-Rules */
 :root{
   --main-color:#181d2b;
+  --secound-color:#131722;
+  --cyan-color:#009ec0;
+  --main-transition:0.3s;
 }
 *{
   box-sizing: border-box;
@@ -41,6 +44,34 @@ body{
   .container{
     width: 1170px;
   }
+}
+a.tv{
+  position: relative;
+width: fit-content;
+display: block;
+background-color: rgb(255, 190, 11);
+padding: 5px 15px;
+border-radius: 20px;
+margin-top: -20px;
+margin-right: 8px;
+color: white;
+font-weight: bold;
+}
+.main-heading{
+  font-family: 'Neo Sans Arabic Bold',sans-serif;
+  margin-bottom: 15px;
+}
+.main-heading h3{
+  background-color: var(--cyan-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+.main-heading a{
+border: 1px solid var(--cyan-color);
+padding: 10px 15px;
+color: var(--cyan-color);
 }
 /* End-Global-Rules */
 /* Start-Main-background-section */
@@ -86,7 +117,7 @@ section.main-background ul li{
 }
 section.main-background ul li:hover,
 section.main-background ul li.active{
-  background-color: #009ec0;
+  background-color: var(--cyan-color);
 }
 /* End-Main-background-section */
 /* Start-posted-animes */
@@ -103,6 +134,7 @@ section.main-background ul li.active{
 .posted-animes .container .box {
   position: relative;
   box-shadow: 0px 0px 10px rgb(3, 3, 3);
+  text-align: center;
 }
 .posted-animes .container .box .img{
   position: relative;
@@ -121,15 +153,16 @@ section.main-background ul li.active{
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.223);
-  transition: 0.3s;
+  transition: var(--main-transition);
 }
 .posted-animes .container .box .img img{
 max-width: 100%;
+width: 100%;
 }
 .posted-animes .container .box span{
   padding: 5px 8px;
   display: block;
-  background-color: #009ec0;
+  background-color: var(--cyan-color);
   width: fit-content;
   border-radius: 25px;
   cursor: pointer;
@@ -139,18 +172,6 @@ max-width: 100%;
   font-size: 12px;
   font-weight: bold;
   font-family: 'Neo Sans Arabic Bold',sans-serif;
-}
-a.tv{
-  position: relative;
-width: fit-content;
-display: block;
-background-color: rgb(255, 190, 11);
-padding: 5px 15px;
-border-radius: 20px;
-margin-top: -20px;
-margin-right: 8px;
-color: white;
-font-weight: bold;
 }
 .posted-animes .container .box p{
 direction: ltr;
@@ -164,9 +185,68 @@ position: relative;
 /* End-posted-animes */
 /* Start-Episodes-section */
 section.episodes{
-  background-color: #131722;
+  background-color: var(--secound-color);
+  position: relative;
 }
-.main-heading{
+section.triangle::before{
+  position: absolute;
+  content: "";
+  border-width: 50px 80px 80px 80px;
+  border-color: var(--main-color) transparent transparent transparent;
+  border-style: solid;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.episodes .container .episodes-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 15px;
+}
+section.episodes .container .episodes-content .box{
+  text-align: center;
+  position: relative;
+  background-color: #1f2535;
+}
+section.episodes .container .episodes-content .box .img{
+position: relative;
+cursor: pointer;
+font-size: 0;
+}
+section.episodes .container .episodes-content .box .img:hover::before{
+  opacity: 1;
+}
+section.episodes .container .episodes-content .box .img::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.471);
+  transition: var(--main-transition);
+}
+section.episodes .container .episodes-content .box .img img{
+max-width: 100%;
+object-fit: cover;
+}
+section.episodes .container .episodes-content .box .img span{
+  color: white;
   font-family: 'Neo Sans Arabic Bold',sans-serif;
+  position: absolute;
+  bottom: 10px;
+  font-size: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+section.episodes .container .episodes-content .box a{
+  display: block;
+  width: fit-content;
+  color: white;
+  padding: 15px 10px;
+  margin: auto;
+  direction: ltr;
 }
 /* End-Episodes-section */
