@@ -5,6 +5,12 @@
 .pd-20{
   padding: 20px;
 }
+.pt-40{
+  padding-top: 40px;
+}
+.pb-40{
+  padding-bottom: 40px;
+}
 /* END-Padding */
 /* Start-Font */
 .fs-30{

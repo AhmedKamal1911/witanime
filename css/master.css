@@ -1,4 +1,7 @@
 /* Start-Global-Rules */
+:root{
+  --main-color:#181d2b;
+}
 *{
   box-sizing: border-box;
   padding: 0;
@@ -86,3 +89,84 @@ section.main-background ul li.active{
   background-color: #009ec0;
 }
 /* End-Main-background-section */
+/* Start-posted-animes */
+.posted-animes{
+  background-color: var(--main-color);
+  color: white;
+  
+}
+.posted-animes .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+  gap: 15px;
+}
+.posted-animes .container .box {
+  position: relative;
+  box-shadow: 0px 0px 10px rgb(3, 3, 3);
+}
+.posted-animes .container .box .img{
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
+}
+.posted-animes .container .box .img:hover::after{
+  opacity: 1;
+}
+.posted-animes .container .box .img::after{
+  position: absolute;
+  opacity: 0;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.223);
+  transition: 0.3s;
+}
+.posted-animes .container .box .img img{
+max-width: 100%;
+}
+.posted-animes .container .box span{
+  padding: 5px 8px;
+  display: block;
+  background-color: #009ec0;
+  width: fit-content;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Neo Sans Arabic Bold',sans-serif;
+}
+a.tv{
+  position: relative;
+width: fit-content;
+display: block;
+background-color: rgb(255, 190, 11);
+padding: 5px 15px;
+border-radius: 20px;
+margin-top: -20px;
+margin-right: 8px;
+color: white;
+font-weight: bold;
+}
+.posted-animes .container .box p{
+direction: ltr;
+padding: 15px 10px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+position: relative;
+}
+
+/* End-posted-animes */
+/* Start-Episodes-section */
+section.episodes{
+  background-color: #131722;
+}
+.main-heading{
+  font-family: 'Neo Sans Arabic Bold',sans-serif;
+}
+/* End-Episodes-section */
