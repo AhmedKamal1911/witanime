@@ -1,0 +1,36 @@
+/* Start-All-margin */
+.pd-10{
+  padding: 10px;
+}
+.pd-20{
+  padding: 20px;
+}
+/* END-Padding */
+/* Start-Font */
+.fs-30{
+font-size: 30px;
+}
+/* End-Font*/
+/* Start-Flex */
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* END-Flex */
+/* Text-Transform */
+.tf-c{
+  text-transform: capitalize;
+}
+.tf-u{
+  text-transform: uppercase;
+}
+/* End-Text-Transform */
+/* Color */
+.c-white{
+  color: white;
+}
