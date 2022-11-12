@@ -16,6 +16,7 @@ a{
 }
 body{
   font-family: 'Kalam', sans-serif;
+  direction: rtl;
 }
 .container{
   margin-left: auto;
@@ -23,9 +24,9 @@ body{
   padding-left: 15px;
   padding-right: 15px;
 }
-@media(min-width:1200px){
+@media(min-width:768px){
   .container{
-    width: 1170px;
+    width: 750px;
   }
 }
 @media(min-width:992px){
@@ -33,9 +34,9 @@ body{
     width: 970px;
   }
 }
-@media(min-width:768px){
+@media(min-width:1200px){
   .container{
-    width: 750px;
+    width: 1170px;
   }
 }
 /* End-Global-Rules */

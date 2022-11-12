@@ -1,0 +1,72 @@
+/* Start-Header */
+header{
+  background-color: white;
+  font-family: 'Neo Sans Arabic Bold',sans-serif;
+}
+@media(max-width:991px){
+header .container{
+  flex-direction: column;
+  gap: 15px;
+}
+
+}
+header .container .icons{
+gap: 10px;
+}
+header .container .icons a{
+width: 35px;
+height: 35px;
+justify-content: center;
+background-color: #f0f0f0;
+border-radius: 50%;
+}
+header .container .icons a i{
+color: black;
+}
+header .container .drop{
+  display: none;
+}
+@media(max-width:991px){
+  header .container .drop{
+    align-self: stretch;
+    padding: 10px 5px;
+    background-color: black;
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+  header .container .drop:hover + ul{
+    display: block;
+  }
+}
+@media(max-width:991px){
+  header .container ul {
+  display: none;
+  align-self: stretch;
+  border: 1px solid rgb(231, 231, 231);
+  }
+  header .container ul li:not(:last-child){
+    border-bottom:1px solid rgb(231, 231, 231);
+  }
+}
+
+header .container ul li a{
+display: block;
+padding: 25px 20px;
+font-size: 14px;
+color: black;
+transition: 0.3s;
+}
+@media(max-width:1200px){
+  header .container ul li a{
+    padding: 10px;
+  }
+}
+header .container ul li a:hover{
+  background-color: rgb(231, 229, 229);
+}
+
+header .container .logo img{
+width: 200px;
+}
+/* End-Header */
