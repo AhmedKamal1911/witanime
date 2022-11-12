@@ -13,6 +13,11 @@ header .container{
 header .container .icons{
 gap: 10px;
 }
+@media(max-width:991px){
+  header .container .icons{
+    margin-bottom: 15px;
+  }
+}
 header .container .icons a{
 width: 35px;
 height: 35px;
